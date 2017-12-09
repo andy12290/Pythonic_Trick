@@ -16,7 +16,9 @@ print(apply_discount(shoes,2.0))
 
 def apply_discount_assert(product,discount):
     discount_price = int(product['price'] * (1-discount))
-    assert 0 <= discount_price <= product['price']
+    #assert 0 <= discount_price <= product['price']
+    assert(0 <= discount_price),"Discount price is greater than Zero"
+    assert(discount_price<= product['price']), "discount price greter tha price:"
     return discount_price
 
 #def apply_discount(product,discount):
@@ -26,5 +28,9 @@ cannot be higher than the original price of the product.
 '''
 
 print(apply_discount_assert(shoes,2.0))
+print(apply_discount_assert(shoes,1.0))
 # it will generate the assert statement.
 # its good for debugging but not for the data validation.
+
+
+#
