@@ -12,7 +12,8 @@ print(apply_discount(shoes,0.25))
 print(apply_discount(shoes,2.0))
 # out: -14900
 
-# we have to check the condition it should not go beyind the original discount_price
+# we have to check the condition it should not go beyind the original
+# discount_price
 
 def apply_discount_assert(product,discount):
     discount_price = int(product['price'] * (1-discount))
